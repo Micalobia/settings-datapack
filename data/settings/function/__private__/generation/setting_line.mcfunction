@@ -12,8 +12,8 @@ $data modify storage settings:data page append value {\
             "fallback":"$(name)",\
         },\
         {\
-            "entity":"@s",\
-            "nbt":'SelectedItem.components.minecraft:custom_data.player.$(key)',\
+            "storage":"settings:data",\
+            "nbt":'player.$(key)',\
             "interpret":'true',\
             "hoverEvent": \
             {\
@@ -30,7 +30,17 @@ $data modify storage settings:data page append value {\
                 "action":"run_command",\
             }\
         }\
-    ]\
+    ],\
+    "hoverEvent": \
+    {\
+        "action": "show_text",\
+        "contents": \
+        {\
+            "translate": "settings.description.$(key)",\
+            "fallback": "$(description)",\
+            "color": "blue"\
+        }\
+    }\
 }
 scoreboard players operation #settings.trigger settings.data = #loop.index settings.data
 scoreboard players add #settings.trigger settings.data 2
