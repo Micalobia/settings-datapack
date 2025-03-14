@@ -5,13 +5,22 @@
         "trapped_chest",
         "ender_chest",
         "#shulker_boxes",
-        "barrel",
+        "crafting_table",
         "furnace",
         "blast_furnace",
         "smoker",
         "dropper",
         "dispenser",
         "hopper",
-        "crafter"
+        "crafter",
+        "enchanting_table",
+        "brewing_stand",
+        "beacon",
+        "anvil",
+        "grindstone",
+        "cartography_table",
+        "loom",
+        "stonecutter",
+        "smithing_table"
     ]
 }

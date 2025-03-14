@@ -3,9 +3,17 @@
     "values": [
         "chest_minecart",
         "hopper_minecart",
-        "chest_boat",
+        "#settings:chest_boat",
+        "villager",
+        "wandering_trader",
+        "horse",
+        "skeleton_horse",
+        "zombie_horse",
         "donkey",
         "mule",
-        "llama"
+        "llama",
+        "camel",
+        "item_frame",
+        "glow_item_frame"
     ]
 }

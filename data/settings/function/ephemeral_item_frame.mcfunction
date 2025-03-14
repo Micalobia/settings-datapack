@@ -1,0 +1,2 @@
+advancement revoke @s only settings:ephemeral_item_frame
+execute as @e[type=#settings:item_frame,distance=..10] if data entity @s Item.components."minecraft:custom_data"."settings" run data remove entity @s Item
