@@ -1,49 +1,83 @@
-// Default Data Types
-// - string
-// - boolean
-// - integer
-// - enum
 {
-    "settings:users": {
-        // Should have every possible setting
-        "default": {
-            "some_bool": true,
-            "some_text": "Notch",
-            "some_integer": 69420
-        },
-        // Might be missing values, will pull from default unless it's changed
-        "user_1": {
-            "some_bool": false,
-            "some_text": "Micah"
-        }
-    },
-    "settings:macro": {
-        // Macro stuff, very context dependent
-    },
-    "settings:entries": {
-        "settings": [
-            {
-                "key": "example.key",
-                "name": "Example",
-                "description": "This is a description",
-                "type": "string",
-                "default": "Wack"
+    "settings:data": {
+        "users": {
+            // Should have every possible setting
+            "default": {
+                "some_bool": true,
+                "some_text": "Notch",
+                "some_integer": 69420
+            },
+            // Might be missing values, will pull from default unless it's changed
+            "user_1": {
+                "some_bool": false,
+                "some_text": "Micah"
             }
-        ],
-        "inputs": {
-            "text": "settings:__private__/accept/text",
-            "boolean": "settings:__private__/accept/boolean",
-            "enum": "settings:__private__/accept/enum"
         },
-        "enums": {
-            "quarry_mode": {
-                "quarry.face": "Face",
-                "quarry.edge": "Edge",
-                "quarry.corner": "Corner"
+        "macro": {
+            // Macro stuff, very context dependent
+        },
+        "entries": {
+            "settings": [
+                {
+                    "namespace": "settings",
+                    "type": "string",
+                    "key": "example.key",
+                    "name": "Example",
+                    "description": "This is a description",
+                    "default": "Wack",
+                    "rank": 1
+                }
+            ],
+            "displays": [
+                {
+                    "namespace": "settings",
+                    "type": "label",
+                    "data": "This is a label",
+                    "rank": 0
+                },
+                {
+                    "namespace": "settings",
+                    "type": "item",
+                    "data": "minecraft:crafting_table[]",
+                    "rank": 2
+                },
+                {
+                    "namespace": "settings",
+                    "type": "button",
+                    "data": {
+                        "text": "This is a Button",
+                        "function": "settings:example"
+                    },
+                    "rank": 3
+                }
+            ],
+            "input_types": {
+                "string": "settings:__private__/accept/string", // text box using `text`
+                "boolean": "settings:__private__/accept/boolean", // check box using `boolean`
+                "enum": "settings:__private__/accept/enum", // cycled button using `single_option`
+                "clamped_integer": "settings:__private__/accept/clamped_integer", // slider using `number_range`
+                "integer": "settings:__private__/accept/integer" // text box using `text` + validation
+            },
+            "display_types": {
+                "label": "settings:__private__/display/label",
+                "item": "settings:__private__/display/item",
+                "button": "settings:__private__/display/button"
+            },
+            "enums": {
+                "quarry_mode": {
+                    "quarry.face": "Face",
+                    "quarry.edge": "Edge",
+                    "quarry.corner": "Corner"
+                }
             }
         }
     },
     "settings:output": {
-        "get": "Micah"
+        "key": "some_text",
+        "type": "string",
+        "result": "Micah",
+        "user_id": 1,
+        "user_uuid": [],
+        "resolved": true
     }
 }
