@@ -1,0 +1,1 @@
+$data modify storage settings:data entries.inputs.$(key) set value '$(function)'

@@ -1,1 +1,0 @@
-$data modify storage settings:data page[-1].with[1].clickEvent.value set value '/trigger Settings set $(trigger)'

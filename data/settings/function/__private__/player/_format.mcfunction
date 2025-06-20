@@ -1,1 +1,0 @@
-$function $(function) with storage settings:data loop.value

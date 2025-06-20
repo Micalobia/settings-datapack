@@ -1,0 +1,49 @@
+// Default Data Types
+// - string
+// - boolean
+// - integer
+// - enum
+{
+    "settings:users": {
+        // Should have every possible setting
+        "default": {
+            "some_bool": true,
+            "some_text": "Notch",
+            "some_integer": 69420
+        },
+        // Might be missing values, will pull from default unless it's changed
+        "user_1": {
+            "some_bool": false,
+            "some_text": "Micah"
+        }
+    },
+    "settings:macro": {
+        // Macro stuff, very context dependent
+    },
+    "settings:entries": {
+        "settings": [
+            {
+                "key": "example.key",
+                "name": "Example",
+                "description": "This is a description",
+                "type": "string",
+                "default": "Wack"
+            }
+        ],
+        "inputs": {
+            "text": "settings:__private__/accept/text",
+            "boolean": "settings:__private__/accept/boolean",
+            "enum": "settings:__private__/accept/enum"
+        },
+        "enums": {
+            "quarry_mode": {
+                "quarry.face": "Face",
+                "quarry.edge": "Edge",
+                "quarry.corner": "Corner"
+            }
+        }
+    },
+    "settings:output": {
+        "get": "Micah"
+    }
+}

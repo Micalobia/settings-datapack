@@ -1,0 +1,39 @@
+{
+    "type": "notice",
+    "title": "Testing Lol",
+    "inputs": [
+        {
+            "type": "single_option",
+            "key": "test_key",
+            "label": "",
+            "label_visible": false,
+            "options": [
+                {
+                    "id":"option_1",
+                    "display": {
+                        "text": "Hello",
+                        "color": "dark_red"
+                    }
+                },
+                {
+                    "id":"test_key_option_2",
+                    "display": {
+                        "text": "Woah",
+                        "color": "dark_green"
+                    }
+                },
+                {
+                    "id":"test_key_option_3",
+                    "display": {
+                        "text": "Shiny",
+                        "color": "gold"
+                    }
+                },
+                {
+                    "id":"test_key_option_4",
+                    "display": "Plain"
+                }
+            ]
+        }
+    ]
+}

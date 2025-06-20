@@ -1,1 +1,0 @@
-$data modify storage settings:data entries.data_types.$(key) set value '$(function)'
