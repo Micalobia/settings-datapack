@@ -13,64 +13,93 @@
                 "some_text": "Micah"
             }
         },
-        "macro": {
-            // Macro stuff, very context dependent
-        },
+        "enum_temp": {},
+        "macro": {},
         "entries": {
-            "settings": [
-                {
-                    "namespace": "settings",
-                    "type": "string",
-                    "key": "example.key",
-                    "name": "Example",
-                    "description": "This is a description",
-                    "default": "Wack",
-                    "rank": 1
-                }
+            "menu_order": [
+                "example_namespace"
             ],
-            "displays": [
-                {
-                    "namespace": "settings",
-                    "type": "label",
-                    "data": "This is a label",
-                    "rank": 0
-                },
-                {
-                    "namespace": "settings",
-                    "type": "item",
-                    "data": "minecraft:crafting_table[]",
-                    "rank": 2
-                },
-                {
-                    "namespace": "settings",
-                    "type": "button",
-                    "data": {
-                        "text": "This is a Button",
-                        "function": "settings:example"
+            "menus": {
+                "example_namespace": [
+                    {
+                        "type": "label",
+                        "setting": false,
+                        "data": {
+                            "text": "This is a label"
+                        }
                     },
-                    "rank": 3
-                }
-            ],
-            "input_types": {
-                "string": "settings:__private__/accept/string", // text box using `text`
-                "boolean": "settings:__private__/accept/boolean", // check box using `boolean`
-                "enum": "settings:__private__/accept/enum", // cycled button using `single_option`
-                "clamped_integer": "settings:__private__/accept/clamped_integer", // slider using `number_range`
-                "integer": "settings:__private__/accept/integer" // text box using `text` + validation
+                    {
+                        "type": "string",
+                        "setting": true,
+                        "key": "example_string",
+                        "data": {
+                            "text": "Example",
+                            "description": "This is a description",
+                            "default": "Wack"
+                        }
+                    },
+                    {
+                        "type": "item",
+                        "setting": false,
+                        "data": {
+                            "id": "minecraft:crafting_table[]"
+                        }
+                    },
+                    {
+                        "type": "enum",
+                        "setting": true,
+                        "key": "example_enum",
+                        "data": {
+                            "text": "ABCDEF",
+                            "description": "DESK",
+                            "default": 2,
+                            "options":[
+                                {"name":"Face","value":1},
+                                {"name":"Edge","value":2},
+                                {"name":"Corner","value":4}
+                            ]
+                        }
+                    }
+                ]
+            },
+            "setting_types": {
+                "string": "settings:__private__/accept/input/string", // text box using `text`
+                "boolean": "settings:__private__/accept/input/boolean", // check box using `boolean`
+                "enum": "settings:__private__/accept/input/enum", // cycled button using `single_option`
+                "clamped_integer": "settings:__private__/accept/input/clamped_integer" // slider using `number_range`
             },
             "display_types": {
-                "label": "settings:__private__/display/label",
-                "item": "settings:__private__/display/item",
-                "button": "settings:__private__/display/button"
+                "label": "settings:__private__/accept/display/label",
+                "item": "settings:__private__/accept/display/item"
             },
-            "enums": {
-                "quarry_mode": {
-                    "quarry.face": "Face",
-                    "quarry.edge": "Edge",
-                    "quarry.corner": "Corner"
+            "settings": [
+                "example_string",
+                "example_boolean"
+            ],
+            "namespaces": {
+                "settings:example": {
+                    "name": "Example Namespace",
+                    "description": "Just an example, nothing to see"
                 }
             }
-        }
+        },
+        "menus": {
+            "root": {}, // This would be the entire generated dialog, essentially, with some nuance
+            "paths": {
+                "example:boolean": {
+                    "function": "settings:__private__/patch/mode/simple",
+                    "path": "some crazy path that says where to edit the initial value in root for the display"
+                },
+                "example_enum": {
+                    "function": "settings:__private__/patch/mode/enum",
+                    "path": "the path the the options list, can index into it after"
+                }
+            },
+            "builder": {},
+            "command": ""
+        },
+        "changes": {},
+        "temp": {}
     },
     "settings:output": {
         "key": "some_text",

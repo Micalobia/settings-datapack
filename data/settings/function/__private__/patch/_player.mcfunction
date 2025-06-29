@@ -1,0 +1,1 @@
+$data modify storage settings:data users.user_$(id).$(key) set from storage settings:data changes.$(key)

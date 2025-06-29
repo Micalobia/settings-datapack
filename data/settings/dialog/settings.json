@@ -1,0 +1,23 @@
+{
+    "title": "Settings",
+    "type": "confirmation",
+    "body": [
+        {
+            "type": "minecraft:plain_message",
+            "contents": "Open the settings menu?"
+        }
+    ],
+    "can_close_with_escape": true,
+    "pause": false,
+    "after_action": "none",
+    "yes": {
+        "label": "Open Settings",
+        "action": {
+            "type": "run_command",
+            "command": "trigger Settings"
+        }
+    },
+    "no": {
+        "label": "Cancel"
+    }
+}

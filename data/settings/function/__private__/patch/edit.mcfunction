@@ -1,0 +1,1 @@
+$function $(function) with storage settings:data macro.patch

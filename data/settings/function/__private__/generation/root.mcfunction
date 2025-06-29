@@ -1,0 +1,3 @@
+data modify storage settings:data menus.paths set value {}
+data modify storage settings:data menus.root set value {type:"dialog_list",title:"Datapack Settings",dialogs:[],columns:1,button_width:300}
+function settings:__private__/generation/menus

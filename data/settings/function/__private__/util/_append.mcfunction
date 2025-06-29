@@ -1,0 +1,1 @@
+$data modify $(nbt) set value "$(left)$(right)"
