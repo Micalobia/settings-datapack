@@ -5,3 +5,4 @@ function settings:__private__/util/loop {\
     nbt:"storage settings:data entries.settings",\
     function:"settings:__private__/patch/_save with storage settings:data loop",\
 }
+trigger Settings

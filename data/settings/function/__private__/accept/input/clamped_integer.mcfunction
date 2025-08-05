@@ -16,7 +16,7 @@ $data modify storage settings:data menus.builder.inputs append value \
 {\
     type:"number_range",\
     key:"$(_key)",\
-    label:"$(text)",\
+    label:$(display),\
     initial:$(default),\
     start:$(start),\
     end:$(end),\

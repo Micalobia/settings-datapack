@@ -1,4 +1,4 @@
-scoreboard objectives remove settings.change
+scoreboard objectives remove Settings
 scoreboard objectives remove settings.data
 scoreboard objectives remove settings.id
 data remove storage settings:data users

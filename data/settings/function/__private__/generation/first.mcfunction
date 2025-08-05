@@ -1,7 +1,7 @@
 $data modify storage settings:data menus.builder set value \
 {\
     type:"confirmation",\
-    title:"$(name)",\
+    title:$(display),\
     inputs:[],\
     body:[],\
     yes:{\
@@ -11,7 +11,11 @@ $data modify storage settings:data menus.builder set value \
         }\
     },\
     no:{\
-        label:"Exit without Saving"\
+        label:"Exit without Saving",\
+        action:{\
+            type:"run_command",\
+            command:"trigger Settings"\
+        }\
     }\
 }
 data modify storage settings:data menus.command set value "function settings:__private__/patch/save {nbt:{_:0"

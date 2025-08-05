@@ -3,5 +3,5 @@
 $data modify storage settings:data menus.builder.body append value \
 {\
     type:"plain_message",\
-    contents:"$(text)"\
+    contents:$(display)\
 }

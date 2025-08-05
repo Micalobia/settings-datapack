@@ -12,7 +12,7 @@ $data modify storage settings:data menus.builder.inputs append value \
 {\
     type:"boolean",\
     key:"$(_key)",\
-    label:"$(text)",\
+    label:$(display),\
     initial:$(default),\
     on_true:"1",\
     on_false:"0"\

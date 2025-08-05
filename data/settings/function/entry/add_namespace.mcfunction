@@ -1,7 +1,3 @@
 # key           [str] => the key for the namespace
-# name          [str] => the name of the namespace for display reasons
-# description   [str] => the description of the namespace
-$data modify storage settings:data entries.namespaces."$(key)" set value {\
-    name:"$(name)",\
-    description:"$(description)",\
-}
+# display       [txt] => json text representing how it's displayed, cannot be a plain string
+$data modify storage settings:data entries.namespaces."$(key)".display set value $(display)

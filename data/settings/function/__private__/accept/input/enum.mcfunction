@@ -17,7 +17,7 @@ $data modify storage settings:data menus.builder.inputs append value \
 {\
     type:"single_option",\
     key:"$(_key)",\
-    label:"$(text)",\
+    label:$(display),\
     options:[]\
 }
 $scoreboard players set #enum_index settings.data $(default)

@@ -38,19 +38,19 @@ function settings:entry/advanced/add_display_type {\
     function:"settings:__private__/accept/display/button"\
 }
 
-function settings:entry/add_namespace {\
-    key:"settings_example",\
-    name:"Example Namespace",\
-    description:"Just an example, nothing to see",\
-}
-
-function settings:entry/add_namespace {\
-    key:"settings_example2",\
-    name:"Example Namespace The Second",\
-    description:"Just an example, nothing to see again",\
-}
-
 ### TESTING SETTINGS ###
+
+# function settings:entry/add_namespace {\
+#     key:"settings_example",\
+#     name:"Example Namespace",\
+#     description:"Just an example, nothing to see",\
+# }
+
+# function settings:entry/add_namespace {\
+#     key:"settings_example2",\
+#     name:"Example Namespace The Second",\
+#     description:"Just an example, nothing to see again",\
+# }
 
 # function settings:entry/add_setting {\
 #     namespace:"settings_example",\

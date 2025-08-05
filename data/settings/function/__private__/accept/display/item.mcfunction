@@ -11,7 +11,7 @@ $data modify storage settings:data menus.builder.body append value \
         components:$(components),\
     },\
     description:{\
-        contents:"$(description)",\
+        contents:$(display),\
     },\
     show_tooltip:$(show_tooltip),\
 }

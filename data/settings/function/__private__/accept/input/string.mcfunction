@@ -14,7 +14,7 @@ $data modify storage settings:data menus.builder.inputs append value \
 {\
     type:"text",\
     key:"$(_key)",\
-    label:"$(text)",\
+    label:$(display),\
     initial:"$(default)",\
     max_length:$(max_length),\
 }
