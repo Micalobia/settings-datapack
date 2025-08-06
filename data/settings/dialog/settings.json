@@ -1,6 +1,7 @@
 {
     "title": "Settings",
-    "type": "confirmation",
+    "external_title": { "text": "Settings...", "color": "#2aa198", "shadow_color": [0.04, 0.16, 0.15, 0.8] },
+    "type": "multi_action",
     "body": [
         {
             "type": "minecraft:plain_message",
@@ -10,14 +11,24 @@
     "can_close_with_escape": true,
     "pause": false,
     "after_action": "none",
-    "yes": {
-        "label": "Open Settings",
-        "action": {
-            "type": "run_command",
-            "command": "trigger Settings"
+    "columns": 1,
+    "actions": [
+        {
+            "label": "Open Settings",
+            "action": {
+                "type": "run_command",
+                "command": "trigger Settings"
+            }
+        },
+        {
+            "label": "Cancel",
+            "action": {
+                "type": "run_command",
+                "command": "trigger Settings set -1"
+            }
         }
-    },
-    "no": {
+    ],
+    "exit_action": {
         "label": "Cancel"
     }
 }
