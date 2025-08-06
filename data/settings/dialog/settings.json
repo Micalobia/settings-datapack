@@ -1,6 +1,10 @@
 {
     "title": "Settings",
-    "external_title": { "text": "Settings...", "color": "#2aa198", "shadow_color": [0.04, 0.16, 0.15, 0.8] },
+    "external_title": {
+        "text": "Settings...",
+        "color": "#2aa198",
+        "shadow_color": [0.04, 0.16, 0.15, 0.8]
+    },
     "type": "multi_action",
     "body": [
         {
