@@ -6,3 +6,4 @@ function settings:__private__/util/loop {\
     function:"settings:__private__/patch/_save with storage settings:data loop",\
 }
 trigger Settings
+function #settings:post_save
